@@ -15,14 +15,13 @@ import java.sql.Statement;
  */
 public class App {
     public static void main(String[] args) {
-        UserDaoImpl userDao = new UserDaoImpl();
-//        userDao.createUsersTable();
-//        userDao.dropUsersTable();
-        userDao.saveUser(1,"Arlen","Kurbanbaev", (byte) 21);
-//        userDao.getAllUsers();
-//        userDao.removeUserById(1);
-//        userDao.cleanUsersTable();
-//        userDao.existsByFirstName("Arlen");
-
+ UserServiceImpl userService = new UserServiceImpl();
+        userService.createUsersTable();
+        userService.dropUsersTable();
+        userService.saveUser(1,"Arlen","Kurbanbaev", (byte) 21);
+        userService.getAllUsers();
+        userService.removeUserById(1);
+        userService.cleanUsersTable();
+        userService.existsByFirstName("Arlen");
     }
 }
